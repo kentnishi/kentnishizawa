@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kent Nishziawa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!--- Google Fonts connect--->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,15 @@
     <div class="container">
         <nav> 
             <img src="images/logo.png" alt="kent nishizawa kanji" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
 
         <!--- Header --->
@@ -38,17 +41,17 @@
                     <img src="images/profile.jpg" alt="kent nishizawa profile">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="about-header"> About Me </h1>
+                    <h1 class="sub-header"> About Me </h1>
                     <p> I am a software engineer based in New York City. I have a passion for creating and developing software applications. 
                         I have experience in full stack development, mobile development, and cloud computing. I am always looking for new 
                         opportunities to learn and grow as a software engineer. </p>
                     
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-content">
+                    <div class="tab-content active-tab" id="skills">
                         <ul>
                             <li><span>Java</span><br>
                                 Algorithmic coding</li>
@@ -60,20 +63,139 @@
                                 Frontend development</li>
                         </ul>
                 </div>
-                <div class="tab-content">
+                <div class="tab-content" id="experience">
                     <ul>
-                        <li><span>Java</span><br>
-                            Algorithmic coding</li>
-                        <li><span>Python</span><br>
-                             Data analysis</li>
-                        <li><span>JavaScript</span><br>
-                            Frontend development</li>
-                        <li><span>React</span><br>
-                            Frontend development</li>
+                        <li><span>2022-2023</span><br>
+                            adfasdfasdf</li>
+                        <li><span>2023-Current</span><br>
+                             sadsfasdf</li>
                     </ul>
+                </div>
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>2018-2022</span><br>
+                            asdfasdfasdf</li>
+                        <li><span>2022-2023</span><br>
+                            asdfasdfasdf</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!--- Services Section --->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-header">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h2>Mobile Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-cloud"></i>
+                    <h2>Cloud Computing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
+    <!--- Portfolio Section --->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-header"> My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png" alt="kent nishizawa work 1">
+                    <div class="layer">
+                        <h3>Project 1</h3>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.png" alt="kent nishizawa work 2">
+                    <div class="layer">
+                        <h3>Project 2</h3>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.png" alt="kent nishizawa work 3">
+                    <div class="layer">
+                        <h3>Project 3</h3>
+                        <p>Desciption</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!--- Contact Section --->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-header">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fas fa-phone-square"></i>123-456-7890</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                    <a href="images/resume" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name"N placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="Message" placeholder="Your Message"></textarea>
+                        <input type="submit" class="btn btn2" value="Submit"> 
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tab of tabcontent){
+            tab.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<!--- side menu script --->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0px";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
 </body>
 </html>
